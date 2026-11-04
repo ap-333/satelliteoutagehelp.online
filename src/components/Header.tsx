@@ -39,7 +39,7 @@ export function Header() {
         <Link href="/" aria-label="Satellite Outage Help home">
           <Logo />
         </Link>
-        <nav aria-label="Primary" className="hidden lg:block">
+        <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => (
               <li key={item.href}>
@@ -61,7 +61,7 @@ export function Header() {
         <CallButton section="header" variant="compact" className="max-xl:!hidden" />
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-paper-line text-ink lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-paper-line text-ink xl:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -72,7 +72,7 @@ export function Header() {
         </div>
       </div>
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-paper-line bg-paper lg:hidden">
+        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-paper-line bg-paper xl:hidden">
           <ul className="mx-auto max-w-6xl px-4 py-2 sm:px-6">
             {mainNav.map((item) => (
               <li key={item.href}>
