@@ -25,12 +25,3 @@ export const siteConfig = {
 export function absoluteUrl(path = "/") {
   return `${siteConfig.url}${path === "/" ? "" : path}`;
 }
-
-/** Server-only: the contact form is only offered when delivery is fully configured. */
-export function isContactDeliveryConfigured() {
-  return Boolean(
-    env(process.env.RESEND_API_KEY) &&
-      env(process.env.CONTACT_TO_EMAIL) &&
-      env(process.env.CONTACT_FROM_EMAIL),
-  );
-}

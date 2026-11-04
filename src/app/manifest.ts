@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 
+export const dynamic = "force-static";
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteConfig.name,
@@ -12,7 +14,7 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#f5f8fc",
     icons: [
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml" },
-      { src: "/apple-icon", sizes: "180x180", type: "image/png" },
+      { src: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   };
 }

@@ -35,3 +35,11 @@ automated checkers (HTTP 403), so it must be confirmed manually.
 Any Node host (Vercel recommended): set the env vars, run `npm run build`, serve with `npm start`, and serve over HTTPS
 (HSTS and CSP headers are set in `next.config.ts`). The contact route rate-limiter is in-memory; use a shared store
 (e.g. Redis/Upstash) if you run multiple instances.
+
+
+## Deployment (GitHub Pages)
+
+The site is a static export (`output: "export"`) deployed by `.github/workflows/deploy.yml` on every push to `main`.
+In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. `public/CNAME`
+holds the custom domain. Because Pages cannot send response headers or run server code, the Content-Security-Policy
+is delivered as a meta tag and there is no contact-form API; contact is by phone (and email once configured).
