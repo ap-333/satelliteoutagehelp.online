@@ -23,5 +23,5 @@ export const siteConfig = {
 } as const;
 
 export function absoluteUrl(path = "/") {
-  return `${siteConfig.url}${path === "/" ? "" : path}`;
+  return `${siteConfig.url}${path === "/" ? "/" : path.endsWith("/") ? path : `${path}/`}`;
 }
