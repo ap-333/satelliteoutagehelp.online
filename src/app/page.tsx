@@ -16,7 +16,7 @@ import { faqItems } from "@/content/faq";
 export const metadata: Metadata = {
   title: { absolute: "Satellite TV Down? Talk to a Live Agent | Satellite Outage Help" },
   description:
-    "Satellite TV down? Call (800) 816-6490 and speak with a live human agent, never an AI, for help with outages, signal loss and equipment problems.",
+    "Satellite TV down? Call (800) 303-2829 and speak with a live human agent, never an AI, for help with outages, signal loss and equipment problems.",
   alternates: { canonical: "/" },
 };
 

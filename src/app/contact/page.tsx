@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
   "Call Satellite Outage Help",
-  "Call (800) 816-6490 to speak with a live human agent about your satellite TV problem. No AI responders.",
+  "Call (800) 303-2829 to speak with a live human agent about your satellite TV problem. No AI responders.",
   "/contact",
 );
 

@@ -27,7 +27,7 @@ export const faqItems: FaqItem[] = [
   },
   {
     q: "Will I speak to a real person or an AI?",
-    a: "A real person. When you call (800) 816-6490 your call is handled by a live human agent. We do not use AI responders, chatbots or automated assistants to talk with callers.",
+    a: "A real person. When you call (800) 303-2829 your call is handled by a live human agent. We do not use AI responders, chatbots or automated assistants to talk with callers.",
   },
   {
     q: "What can a live agent help me with?",
