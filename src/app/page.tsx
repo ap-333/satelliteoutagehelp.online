@@ -12,8 +12,11 @@ import { photos } from "@/config/photos";
 import { Reveal } from "@/components/Reveal";
 import { equipment } from "@/content/equipment";
 import { faqItems } from "@/content/faq";
+import { DishLanding } from "@/components/DishLanding";
+import { landingOnly } from "@/config/landing";
+import { dishMetadata } from "@/lib/dishMetadata";
 
-export const metadata: Metadata = {
+const homeMetadata: Metadata = {
   title: { absolute: "Satellite TV Down? Talk to a Live Agent | Satellite Outage Help" },
   description:
     "Satellite TV down? Call (800) 303-2829 and speak with a live human agent, never an AI, for help with outages, signal loss and equipment problems.",
@@ -26,7 +29,10 @@ const faqLd = {
   mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
+export const metadata: Metadata = landingOnly ? { ...dishMetadata, alternates: { canonical: "/" } } : homeMetadata;
+
 export default function HomePage() {
+  if (landingOnly) return <DishLanding />;
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />

@@ -3,7 +3,9 @@ import { Inter } from "next/font/google";
 import { CallPopupLoader } from "@/components/CallPopupLoader";
 import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
+import { ChromeSwitch } from "@/components/ChromeSwitch";
 import { Header } from "@/components/Header";
+import { LandingFooter, LandingHeader } from "@/components/LandingChrome";
 import { absoluteUrl, siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -97,9 +99,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Header />
+        <ChromeSwitch site={<Header />} landing={<LandingHeader />} />
         <main id="main">{children}</main>
-        <Footer />
+        <ChromeSwitch site={<Footer />} landing={<LandingFooter />} />
         <CallPopupLoader />
         <Analytics />
       </body>

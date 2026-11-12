@@ -6,6 +6,7 @@ export const dynamic = "force-static";
 const paths = ["/", "/outage-information", "/satellite-equipment", "/satellite-signal-information", "/provider-resources", "/about", "/contact", "/privacy-policy", "/terms", "/disclaimer"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (process.env.NEXT_PUBLIC_LANDING_ONLY === "1") return [];
   const lastModified = new Date(siteConfig.lastUpdated);
   return paths.map((p) => ({ url: absoluteUrl(p), lastModified, changeFrequency: "monthly", priority: p === "/" ? 1 : 0.7 }));
 }
